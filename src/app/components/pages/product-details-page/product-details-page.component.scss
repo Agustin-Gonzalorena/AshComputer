@@ -1,0 +1,132 @@
+.noProduct {
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.loading {
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.containerProduct {
+    margin-top: 20px;
+    /* border: solid 2px #673ab7; */
+    box-shadow: 0 0 15px 5px #673ab7;
+    height: 400px;
+    width: 1200px;
+    display: flex;
+    align-items: center;
+}
+
+.containerImage {
+    /* border: solid red 2px; */
+    height: 90%;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img {
+    /* border: solid; */
+    height: 250px;
+    width: auto;
+    margin: 0;
+}
+
+.containerDetails {
+    /* border: solid blue 2px; */
+    height: 90%;
+    width: 30%;
+
+    .valoration {
+        color: #673ab7;
+        font-size: 23px;
+
+        span {
+            font-size: 15px;
+        }
+    }
+
+    h1 {
+        font-size: xx-large;
+        font-weight: 500;
+    }
+
+    .sold {
+        color: rgb(131, 131, 131);
+    }
+
+    h2 {
+        font-size: 33px;
+        font-weight: 350;
+    }
+
+    ul {
+        margin-left: 17px;
+    }
+
+    li {
+        margin-bottom: 10px;
+        list-style-type: disc;
+    }
+}
+
+
+
+
+
+.containerButton {
+    border: solid lightgray 1px;
+    border-radius: 13px;
+    width: 28%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .ajustContainerButton {
+        height: 90%;
+        width: 90%;
+
+        h2 {
+            display: flex;
+            align-items: center;
+            color: #0df318;
+            font-size: 15px;
+        }
+
+        h3 {
+            font-weight: 500;
+        }
+
+        img {
+            height: 25px;
+            margin-right: 5px;
+        }
+
+        button {
+            margin-top: 30px;
+            width: 100%;
+            height: 50px;
+        }
+
+        p {
+            margin-top: 15px;
+        }
+    }
+
+
+}
+
+.previous {
+    margin: 0;
+
+    span {
+        text-decoration: line-through;
+    }
+}

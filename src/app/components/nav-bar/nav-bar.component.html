@@ -1,0 +1,19 @@
+<mat-toolbar>
+    <div class="sides">
+        <h1 routerLink="/home">Ash Computer</h1>
+    </div>
+    <ul>
+        <li routerLink="/home">INICIO</li>
+        <li routerLink="/products">PRODUCTOS</li>
+        <li routerLink="/about">NOSOTROS</li>
+    </ul>
+    <div class="sides">
+        <div class="cartMenu">
+            <p matBadge={{inCart}} matBadgeOverlap="true" mat-flat-button color="primary" [matMenuTriggerFor]="menu">
+                CARRITO</p>
+            <mat-menu #menu="matMenu">
+                <app-mini-cart></app-mini-cart>
+            </mat-menu>
+        </div>
+    </div>
+</mat-toolbar>

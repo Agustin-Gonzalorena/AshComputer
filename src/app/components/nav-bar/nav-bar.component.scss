@@ -1,0 +1,59 @@
+ul {
+    display: flex;
+    flex-direction: row;
+    width: 400px;
+    justify-content: space-between;
+    margin: 0;
+    font-size: medium;
+}
+
+li:hover,
+p:hover {
+    color: black;
+}
+
+
+h1 {
+    font-size: xx-large;
+    margin-bottom: 15px;
+    color: white;
+    text-shadow: 5px 3px 3px black;
+}
+
+li:hover,
+p:hover,
+h1:hover {
+    cursor: pointer;
+}
+
+
+.sides {
+    width: 300px;
+}
+
+.cartMenu {
+    text-align: end;
+}
+
+button {
+    font-size: medium;
+}
+
+p {
+    margin: 0;
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+mat-toolbar {
+    background-color: #673ab7;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.mat-badge-content {
+    background: black;
+    color: white;
+}

@@ -1,0 +1,25 @@
+<div>
+    <table>
+        <thead>
+            <th>
+            </th>
+            <th></th>
+            <th></th>
+            <th></th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let laptop of laptops">
+                <td><img [src]="laptop.image" alt=""></td>
+                <td>{{laptop.name}}</td>
+                <td>{{laptop.quantity}}</td>
+                <td>{{laptop.price*laptop.quantity|currency : 'USD' : 'symbol' : '1.0-0'}}</td>
+            </tr>
+        </tbody>
+    </table>
+    <h2 *ngIf="laptops.length==0">Carrito vacio</h2>
+
+</div>
+<p *ngIf="laptops.length!=0">Total a Pagar: <span [innerText]="total|currency : 'USD' : 'symbol' : '1.0-0' "></span></p>
+<section>
+    <button mat-raised-button routerLink="/cart">IR AL CARRITO</button>
+</section>

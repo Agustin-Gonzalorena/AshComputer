@@ -1,0 +1,31 @@
+img {
+    height: 40px;
+    width: auto;
+}
+
+div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    margin-top: 10px;
+    margin-bottom: 2px;
+    width: 250px;
+    color: white;
+    background-color: grey;
+}
+
+button:hover {
+    background-color: #673ab7;
+}
+
+p {
+    text-align: start;
+}

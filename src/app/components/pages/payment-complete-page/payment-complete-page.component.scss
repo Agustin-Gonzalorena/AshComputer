@@ -1,0 +1,51 @@
+.containerPayment {
+    height: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .cardPay {
+        box-shadow: 0 0 10px 5px gray;
+        margin-top: 20px;
+        width: 800px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .title {
+            border: solid 2px #673ab7;
+            background-color: #673ab7;
+            padding: 10px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            img {
+                margin-bottom: 10px;
+                height: 40px;
+            }
+
+            h1 {
+                margin-bottom: 0;
+                color: white;
+                font-weight: 500;
+            }
+
+
+        }
+
+        .details {
+            margin-top: 10px;
+            width: 90%;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        button {
+            margin-bottom: 16px;
+        }
+    }
+}

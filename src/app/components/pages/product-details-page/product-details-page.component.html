@@ -1,0 +1,50 @@
+<div *ngIf="!laptop" class="noProduct">
+    <h1>Producto no encontrado</h1>
+    <button mat-raised-button color="primary" routerLink="/products">Ir a la lista de productos</button>
+</div>
+<div *ngIf="laptop.id==0" class="loading">
+    <mat-spinner></mat-spinner>
+</div>
+<div *ngIf="laptop.id" class="containerProduct">
+    <div class="containerImage">
+        <img [src]="laptop.image" alt="">
+    </div>
+    <div class="containerDetails">
+        <p class="sold">Nuevo | <span>{{700+laptop.id*9}}</span> vendidos</p>
+        <h1>{{laptop.name}}</h1>
+        <p class="valoration">★★★★★<span>({{400+laptop.id*7}})</span></p>
+        <h2>{{laptop.price|currency : 'USD' : 'symbol' : '1.0-0'}}
+            <span *ngIf="laptop.offer==true" [ngStyle]="{color:'green'}">En oferta</span>
+        </h2>
+
+        <p *ngIf="laptop.offer" class="previous">Antes:
+            <span> {{laptop.price+laptop.price*0.40|currency :'USD' : 'symbol' :'1.0-0'}}</span>
+        </p>
+
+        <h3>Lo que tienes que saber del producto:</h3>
+        <ul>
+            <li>Procesador: <span *ngFor="let d of laptop.description">{{d.processor}}</span></li>
+            <li>Ram: <span *ngFor="let d of laptop.description">{{d.ram}}</span></li>
+            <li>Tamaño de pantalla: <span *ngFor="let d of laptop.description">{{d.screen}}</span></li>
+            <li>Almacenamiento: <span *ngFor="let d of laptop.description">{{d.storage}}</span></li>
+        </ul>
+    </div>
+    <div class="containerButton">
+        <div class="ajustContainerButton">
+            <h2>
+                <img src="/assets/img/iconCamion.png">
+                Envio gratis a todo el pais
+            </h2>
+            <div>
+                <h3 *ngIf="laptop.stock>0">Stock disponiple</h3>
+                <h3 *ngIf="laptop.stock==0" [ngStyle]="{color:'red'}">Stock Agotado</h3>
+                <h4>Cantidad: {{laptop.stock}} <Span *ngIf="laptop.stock>1">unidades</Span><span
+                        *ngIf="laptop.stock==1">unidad</span></h4>
+                <button *ngIf="laptop.stock>0" mat-raised-button color="primary" (click)="addToCart(laptop)">Agregar al
+                    carrito</button>
+                <p>Devolución gratis. Tenés 30 días desde que lo recibís.</p>
+                <p>12 meses de garantía de fábrica.</p>
+            </div>
+        </div>
+    </div>
+</div>

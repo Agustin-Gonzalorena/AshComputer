@@ -1,0 +1,52 @@
+<div *ngIf="laptops.length==0" class="loading">
+    <mat-spinner></mat-spinner>
+</div>
+<div class=" container2" *ngIf="laptops.length>0">
+    <div class="filter">
+        <mat-form-field appearance="outline">
+            <mat-label>ORDENAR</mat-label>
+            <mat-select>
+                <mat-option (click)="orderRelevant()">
+                    Mas relevantes
+                </mat-option>
+                <mat-option (click)="orderMin()">
+                    Menor precio
+                </mat-option>
+                <mat-option (click)="orderMax()">
+                    Mayor precio
+                </mat-option>
+                <mat-option (click)="orderMaxStock()">
+                    Con Stock
+                </mat-option>
+                <mat-option (click)="orderOffer()">
+                    En oferta
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+    </div>
+    <div class="cards" *ngFor="let laptop of laptops">
+        <section>
+            <div class="stock">
+                <h4 class="outStock" *ngIf="laptop.stock==0">Sin Stock</h4>
+                <h4 class="avalible" *ngIf="laptop.offer">OFERTA</h4>
+            </div>
+            <div class="imgAndTitle">
+                <img [src]="laptop.image" [alt]="laptop.name">
+            </div>
+
+            <h2>{{laptop.name}}</h2>
+            <h3>{{laptop.price|currency : 'USD' : 'symbol' : '1.0-0'}}</h3>
+
+            <p *ngIf="laptop.offer" class="previous">Antes:
+                <span> {{laptop.price+laptop.price*0.40|currency :'USD' : 'symbol' :'1.0-0'}}</span>
+            </p>
+            <p *ngIf="!laptop.offer" class="previous"></p>
+
+            <div [ngStyle]="{display:'flex'}">
+                <button mat-raised-button color="primary" routerLink="/product/{{laptop.id}}">Ver más</button>
+                <button mat-raised-button color="primary" *ngIf="laptop.stock>0" (click)="addToCart(laptop)">Agregar al
+                    carrito</button>
+            </div>
+        </section>
+    </div>
+</div>

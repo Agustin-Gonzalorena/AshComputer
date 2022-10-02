@@ -1,0 +1,22 @@
+<section class="containerPayment">
+    <div class="cardPay">
+        <section class="title">
+            <img src="assets/img/check.png" alt="">
+            <h1 [innerText]="'pago aceptado con exito'|uppercase"></h1>
+        </section>
+        <section class="details">
+            <div>
+                <h2>ID de compra: 127900384005</h2>
+                <h3>Nro. de seguimiento(OCA): 3867500000053666596 </h3>
+            </div>
+            <div>
+                <h3>Nro. Factura: 7211</h3>
+                <h2>Importe: {{total|currency : 'USD' : 'symbol' : '1.0-0'}}</h2>
+            </div>
+
+
+        </section>
+        <h2>Gracias por su compra!</h2>
+        <button mat-raised-button color="primary" routerLink="/home">Volver al incio</button>
+    </div>
+</section>
