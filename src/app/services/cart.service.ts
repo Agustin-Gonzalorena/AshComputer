@@ -23,6 +23,7 @@ export class CartService {
   private _datoStock:IFact[]=[];
   private _datoStockSubject:BehaviorSubject<IFact>=new BehaviorSubject<IFact>({name:'d',stock:1})
   datoStock:Observable<IFact>=this._datoStockSubject.asObservable();
+
   constructor() { }
 
   addToCart(laptop: ILaptops) {
@@ -36,17 +37,16 @@ export class CartService {
       item.quantity += laptop.quantity;
     }
     this.sum=this.sum+laptop.price
-    this.sumSubject.next(this.sum)
-
-    this._laptopsSubject.next(this._laptops);
     this._inCart=this._inCart+1
+    
+    this.sumSubject.next(this.sum)
+    this._laptopsSubject.next(this._laptops);
     this._inCartSubject.next(this._inCart)
   }
   emptyCart(){
     this._inCart=0;
     this._laptops=[];
     this.sum=0;
-    /* this.sumSubject.next(0); */
     this._inCartSubject.next(0);
     this.backUpSubject.next([]);
     this._laptopsSubject.next([]);

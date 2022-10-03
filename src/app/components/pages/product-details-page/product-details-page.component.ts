@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ILaptops } from 'src/app/interfaces/laptos-interface';
 import { CartService } from 'src/app/services/cart.service';

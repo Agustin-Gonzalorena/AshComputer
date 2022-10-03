@@ -17,12 +17,13 @@ export class CartPageComponent implements OnInit {
   ngOnInit(): void {
     this.cartService.laptops.subscribe(d=>this.laptops=d)
     this.cartService.sumSubject.subscribe(d=>this.total=d)
+    
     if(this.laptops.length!=0){
       this.class='full';
     }
   }
+
   emptyCart(){
-    
     this.laptops=[];
     this.cartService.emptyCart();
     this.class='empty';

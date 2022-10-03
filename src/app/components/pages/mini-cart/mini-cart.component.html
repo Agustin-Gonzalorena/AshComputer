@@ -1,12 +1,5 @@
 <div>
     <table>
-        <thead>
-            <th>
-            </th>
-            <th></th>
-            <th></th>
-            <th></th>
-        </thead>
         <tbody>
             <tr *ngFor="let laptop of laptops">
                 <td><img [src]="laptop.image" alt=""></td>
@@ -17,7 +10,6 @@
         </tbody>
     </table>
     <h2 *ngIf="laptops.length==0">Carrito vacio</h2>
-
 </div>
 <p *ngIf="laptops.length!=0">Total a Pagar: <span [innerText]="total|currency : 'USD' : 'symbol' : '1.0-0' "></span></p>
 <section>

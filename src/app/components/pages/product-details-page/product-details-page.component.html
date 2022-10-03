@@ -2,9 +2,11 @@
     <h1>Producto no encontrado</h1>
     <button mat-raised-button color="primary" routerLink="/products">Ir a la lista de productos</button>
 </div>
+
 <div *ngIf="laptop.id==0" class="loading">
     <mat-spinner></mat-spinner>
 </div>
+
 <div *ngIf="laptop.id" class="containerProduct">
     <div class="containerImage">
         <img [src]="laptop.image" alt="">

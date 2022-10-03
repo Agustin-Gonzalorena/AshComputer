@@ -14,7 +14,6 @@
 
 .containerProduct {
     margin-top: 20px;
-    /* border: solid 2px #673ab7; */
     box-shadow: 0 0 15px 5px #673ab7;
     height: 400px;
     width: 1200px;
@@ -23,7 +22,6 @@
 }
 
 .containerImage {
-    /* border: solid red 2px; */
     height: 90%;
     width: 40%;
     display: flex;
@@ -32,14 +30,12 @@
 }
 
 img {
-    /* border: solid; */
     height: 250px;
     width: auto;
     margin: 0;
 }
 
 .containerDetails {
-    /* border: solid blue 2px; */
     height: 90%;
     width: 30%;
 
@@ -75,10 +71,6 @@ img {
         list-style-type: disc;
     }
 }
-
-
-
-
 
 .containerButton {
     border: solid lightgray 1px;

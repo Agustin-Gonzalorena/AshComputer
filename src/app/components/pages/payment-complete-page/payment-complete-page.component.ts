@@ -8,11 +8,10 @@ import { CartService } from 'src/app/services/cart.service';
   styleUrls: ['./payment-complete-page.component.scss']
 })
 export class PaymentCompletePageComponent implements OnInit,OnDestroy {
-  total:number;
+  total:number=0;
   constructor(
     private cartService:CartService,
     private router:Router) {
-    this.total=0;
    }
 
   ngOnInit(): void {

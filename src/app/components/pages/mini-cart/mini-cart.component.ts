@@ -9,9 +9,8 @@ import { CartService } from 'src/app/services/cart.service';
 })
 export class MiniCartComponent implements OnInit {
   laptops:ILaptops[]=[];
-  total:number;
+  total:number=0;
   constructor(private cartService: CartService) {
-    this.total=0;
    }
 
   ngOnInit(): void {

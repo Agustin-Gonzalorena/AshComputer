@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { ILaptops } from 'src/app/interfaces/laptos-interface';
 import { CartService } from 'src/app/services/cart.service';
 
 @Component({

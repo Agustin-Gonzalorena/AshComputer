@@ -34,14 +34,13 @@
             <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
             <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
         </table>
-        <div class="buttons">
 
+        <div class="buttons">
             <button mat-raised-button color="warn" (click)="emptyCart()">Vaciar carrito</button>
             <div>
                 <h3>Total a pagar:{{total|currency : 'USD' : 'symbol' : '1.0-0'}}</h3>
                 <button mat-raised-button color="accent" routerLink="/paymentComplete"
                     (click)="emptyCart()">PAGAR</button>
-
             </div>
         </div>
     </div>
